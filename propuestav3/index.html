@@ -1,74 +1,72 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <title>Signal Grid · LLM Guider proposal</title>
-  <meta name="description" content="A launch-ready, crisp landing with strong hierarchy and balanced trust.">
-  <meta property="og:title" content="Signal Grid · LLM Guider proposal">
-  <meta property="og:description" content="A launch-ready, crisp landing with strong hierarchy and balanced trust.">
+  <title>Signal Grid · LLM Guider — AI guides crafted with ethics</title>
+  <meta name="description" content="In-depth, responsible guides for GPT-4, Claude, Gemini & Llama. Independent comparisons, ethical best practices, and a human-first approach.">
+  <meta property="og:title" content="Signal Grid · LLM Guider — AI guides crafted with ethics">
+  <meta property="og:description" content="In-depth, responsible guides for GPT-4, Claude, Gemini & Llama. Independent comparisons, ethical best practices, and a human-first approach.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://guider.quitiweb.com/assets/og-preview.svg">
   
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#e9ecf1">
+  <meta name="theme-color" content="#f4efe7">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   
-  <!-- Existing fonts kept for fallback / monospace needs -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
-  
-  <!-- Clean, unique, confidence-inspiring display face -->
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
   <link rel="stylesheet" href="/assets/site.css">
   
-  <!-- Injected design layer: subtle neumorphism, clean type, zero AI‑box feel -->
+  <!-- ═══ Artist‑led design system · Mark Wheeler–inspired tactile collage ═══ -->
   <style>
-    /* ----- design variables (light, airy, tactile) ----- */
     :root {
-      --neu-bg: #e9ecf1;
-      --neu-card-bg: #f0f2f5;
-      --neu-shadow-dark: #d1d6e0;
-      --neu-shadow-light: #ffffff;
-      --neu-radius: 22px;
-      --neu-radius-sm: 14px;
-      --text-primary: #0f172a;
-      --text-secondary: #475569;
-      --accent-deep: #0b1e33;
-      --border-soft: rgba(255,255,255,0.6);
+      --paper: #f4efe7;
+      --ink: #121826;
+      --accent: #e54b4b;
+      --accent-glow: #ff7b7b;
+      --shadow-dark: rgba(0,0,0,0.06);
+      --shadow-light: rgba(255,255,255,0.9);
+      --card-bg: #fcfaf7;
+      --radius: 20px;
+      --radius-sm: 12px;
+      --font-display: 'Outfit', 'Inter', sans-serif;
     }
 
-    /* ----- global reset / foundation ----- */
+    /* ——— Tactile backdrop with noise texture ——— */
     body {
-      background: var(--neu-bg);
-      background-image: radial-gradient(circle at 30% 0%, #f4f7fc, #e2e7ef);
-      color: var(--text-primary);
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--paper);
+      background-image: 
+        radial-gradient(circle at 20% 30%, #fff9f5 0%, #ece4d7 100%),
+        url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E");
+      color: var(--ink);
+      font-family: 'Inter', -apple-system, sans-serif;
       margin: 0;
       -webkit-font-smoothing: antialiased;
     }
 
     h1, h2, h3, .brand-mark, .kicker, .eyebrow, .status-chip, .lead, .button, .brand {
-      font-family: 'Outfit', 'Inter', sans-serif;
+      font-family: var(--font-display);
       font-weight: 600;
-      letter-spacing: -0.01em;
+      letter-spacing: -0.02em;
     }
 
     .container {
-      max-width: 1200px;
+      max-width: 1220px;
       margin: 0 auto;
-      padding: 0 1.5rem;
+      padding: 0 1.8rem;
     }
 
-    /* ----- header: glassmorphism meets neumorphism ----- */
+    /* ——— Header : floating collage strip ——— */
     .site-header {
-      background: rgba(240,242,245,0.72);
-      backdrop-filter: blur(18px);
-      -webkit-backdrop-filter: blur(18px);
-      border-bottom: 1px solid var(--border-soft);
-      box-shadow: 0 4px 18px rgba(0,0,0,0.03);
-      padding: 0.9rem 0;
+      background: rgba(252,250,247,0.75);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border-bottom: 1px solid rgba(0,0,0,0.04);
+      box-shadow: 0 6px 28px rgba(0,0,0,0.04);
+      padding: 0.8rem 0;
     }
 
     .brand {
@@ -76,21 +74,21 @@
       align-items: center;
       gap: 0.5rem;
       text-decoration: none;
-      color: var(--text-primary);
+      color: var(--ink);
     }
 
     .brand-mark {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 38px;
-      height: 38px;
+      width: 42px;
+      height: 42px;
       border-radius: 12px;
-      background: var(--neu-card-bg);
-      box-shadow: 5px 5px 10px var(--neu-shadow-dark), -5px -5px 10px var(--neu-shadow-light);
+      background: var(--card-bg);
+      box-shadow: 5px 5px 12px var(--shadow-dark), -3px -3px 12px var(--shadow-light);
       font-weight: 700;
-      font-size: 1.1rem;
-      color: var(--accent-deep);
+      font-size: 1.2rem;
+      color: var(--accent);
       transition: box-shadow 0.2s;
     }
 
@@ -102,103 +100,112 @@
     }
 
     .brand small {
-      font-size: 0.7rem;
-      color: var(--text-secondary);
+      font-size: 0.68rem;
+      color: #5b5f6b;
       font-weight: 500;
       font-family: 'Inter', sans-serif;
     }
 
-    /* language toggle */
     .toggle-group {
       display: flex;
       border-radius: 40px;
-      background: var(--neu-card-bg);
-      box-shadow: inset 2px 2px 5px var(--neu-shadow-dark), inset -2px -2px 5px var(--neu-shadow-light);
+      background: var(--card-bg);
+      box-shadow: inset 2px 2px 6px var(--shadow-dark), inset -2px -2px 6px var(--shadow-light);
       padding: 3px;
     }
 
     .toggle-group button {
       background: transparent;
       border: none;
-      padding: 0.4em 1.1em;
+      padding: 0.4em 1.2em;
       border-radius: 30px;
-      font-family: 'Outfit', sans-serif;
+      font-family: var(--font-display);
       font-weight: 600;
-      font-size: 0.85rem;
-      color: var(--text-secondary);
+      font-size: 0.82rem;
+      color: #5b5f6b;
       cursor: pointer;
-      transition: all 0.2s;
+      transition: all 0.25s;
     }
 
     .toggle-group button.active {
-      background: var(--neu-card-bg);
-      box-shadow: 3px 3px 6px var(--neu-shadow-dark), -3px -3px 6px var(--neu-shadow-light);
-      color: var(--accent-deep);
+      background: var(--card-bg);
+      box-shadow: 4px 4px 8px var(--shadow-dark), -4px -4px 8px var(--shadow-light);
+      color: var(--accent);
     }
 
-    /* ----- buttons (neu‑pressed on hover) ----- */
+    /* ——— Buttons with heavy paper‑like press ——— */
     .button {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 0.75em 1.9em;
-      border-radius: 40px;
+      padding: 0.8em 2.2em;
+      border-radius: 38px;
       font-weight: 600;
       text-decoration: none;
-      transition: box-shadow 0.25s, transform 0.2s;
+      transition: box-shadow 0.2s, transform 0.2s;
       border: none;
-      background: var(--neu-card-bg);
-      box-shadow: 6px 6px 12px var(--neu-shadow-dark), -6px -6px 12px var(--neu-shadow-light);
-      color: var(--accent-deep);
+      background: var(--card-bg);
+      box-shadow: 7px 7px 14px var(--shadow-dark), -7px -7px 14px var(--shadow-light);
+      color: var(--ink);
       font-size: 0.95rem;
       letter-spacing: 0.01em;
       cursor: pointer;
+      position: relative;
     }
 
     .button:hover {
-      box-shadow: inset 4px 4px 8px var(--neu-shadow-dark), inset -4px -4px 8px var(--neu-shadow-light);
-      transform: translateY(1px);
+      box-shadow: inset 3px 3px 8px var(--shadow-dark), inset -3px -3px 8px var(--shadow-light);
+      transform: translateY(2px);
     }
 
     .button-primary {
-      background: var(--accent-deep);
+      background: var(--accent);
       color: #fff;
-      box-shadow: 6px 6px 14px rgba(11,30,51,0.25), -6px -6px 14px rgba(255,255,255,0.5);
+      box-shadow: 8px 8px 18px rgba(229,75,75,0.25), -6px -6px 18px rgba(255,255,255,0.7);
     }
 
     .button-primary:hover {
-      box-shadow: inset 4px 4px 8px rgba(0,0,0,0.35), inset -4px -4px 8px rgba(255,255,255,0.25);
-      transform: translateY(1px);
+      box-shadow: inset 4px 4px 10px rgba(0,0,0,0.3), inset -4px -4px 10px rgba(255,255,255,0.25);
     }
 
-    .button-secondary {
-      background: var(--neu-card-bg);
-    }
-
-    /* ----- hero area ----- */
+    /* ——— Hero area : bold typography with hand‑drawn energy ——— */
     .hero {
-      padding: 4rem 0 3rem;
+      padding: 4.5rem 0 3.2rem;
     }
 
     .hero-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 2.5rem;
+      gap: 2.8rem;
       align-items: center;
     }
 
     .hero h1 {
-      font-size: clamp(3rem, 7vw, 4.4rem);
+      font-size: clamp(3.2rem, 8vw, 4.8rem);
       font-weight: 800;
-      line-height: 1.1;
-      color: var(--accent-deep);
-      margin: 0.3rem 0 0.7rem;
-      letter-spacing: -0.03em;
+      line-height: 1.05;
+      color: var(--ink);
+      margin: 0.2rem 0 0.7rem;
+      position: relative;
+      display: inline-block;
+    }
+
+    /* Hand‑drawn underline (artist’s scribble) */
+    .hero h1::after {
+      content: "";
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      width: 110%;
+      height: 18px;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 14'%3E%3Cpath d='M2 11 C 30 6, 60 12, 118 8' stroke='%23e54b4b' stroke-width='3' fill='none' stroke-linecap='round' opacity='0.8'/%3E%3C/svg%3E") no-repeat left bottom;
+      background-size: contain;
+      pointer-events: none;
     }
 
     .lead {
-      font-size: 1.2rem;
-      color: var(--text-secondary);
+      font-size: 1.25rem;
+      color: #3a3f4c;
       line-height: 1.5;
       font-weight: 500;
       max-width: 90%;
@@ -209,50 +216,66 @@
       align-items: center;
       gap: 0.75rem;
       flex-wrap: wrap;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.6rem;
     }
 
     .eyebrow {
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       font-weight: 600;
       text-transform: uppercase;
-      letter-spacing: 0.04em;
-      color: var(--text-secondary);
-      background: var(--neu-card-bg);
+      letter-spacing: 0.05em;
+      color: var(--ink);
+      background: var(--card-bg);
       padding: 0.3em 1em;
       border-radius: 30px;
-      box-shadow: inset 2px 2px 5px var(--neu-shadow-dark), inset -2px -2px 5px var(--neu-shadow-light);
+      box-shadow: inset 2px 2px 5px var(--shadow-dark), inset -2px -2px 5px var(--shadow-light);
     }
 
     .status-chip {
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       font-weight: 500;
-      color: var(--text-secondary);
-      background: var(--neu-card-bg);
+      background: var(--card-bg);
       padding: 0.3em 1em;
       border-radius: 30px;
-      box-shadow: inset 2px 2px 5px var(--neu-shadow-dark), inset -2px -2px 5px var(--neu-shadow-light);
+      box-shadow: inset 2px 2px 5px var(--shadow-dark), inset -2px -2px 5px var(--shadow-light);
+      color: var(--accent);
     }
 
-    /* hero card (aside) – soft neumorphic panel */
+    /* Hero collage card — paper‑layered feel */
     .hero-card {
-      background: var(--neu-card-bg);
-      border-radius: var(--neu-radius);
-      box-shadow: 12px 12px 24px var(--neu-shadow-dark), -12px -12px 24px var(--neu-shadow-light);
-      padding: 2rem 2rem 2.2rem;
-      transition: box-shadow 0.3s, transform 0.2s;
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      box-shadow: 18px 18px 34px var(--shadow-dark), -12px -12px 24px var(--shadow-light);
+      padding: 2.3rem 2.2rem;
+      transform: rotate(0.5deg);
+      transition: transform 0.3s, box-shadow 0.25s;
+      position: relative;
     }
 
     .hero-card:hover {
-      transform: translateY(-3px);
-      box-shadow: 14px 14px 26px var(--neu-shadow-dark), -14px -14px 26px var(--neu-shadow-light);
+      transform: rotate(0deg) translateY(-4px);
+      box-shadow: 22px 22px 38px var(--shadow-dark), -16px -16px 28px var(--shadow-light);
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      top: -8px;
+      right: -8px;
+      width: 100%;
+      height: 100%;
+      background: rgba(229,75,75,0.04);
+      border-radius: var(--radius);
+      border: 2px dashed rgba(229,75,75,0.3);
+      z-index: -1;
     }
 
     .hero-card h2 {
-      font-size: 1.6rem;
-      margin: 0.4rem 0 1rem;
+      font-size: 1.65rem;
+      margin: 0.3rem 0 1rem;
       font-weight: 700;
-      color: var(--accent-deep);
+      color: var(--ink);
+      line-height: 1.3;
     }
 
     .list {
@@ -262,88 +285,101 @@
     }
 
     .list li {
-      padding: 0.5rem 0 0.5rem 1.5rem;
+      padding: 0.5rem 0 0.5rem 1.6rem;
       position: relative;
       font-weight: 500;
-      color: var(--text-secondary);
-      border-bottom: 1px solid rgba(0,0,0,0.04);
+      color: #3a3f4c;
+      border-bottom: 1px solid rgba(0,0,0,0.03);
     }
 
     .list li::before {
-      content: "•";
+      content: "✧";
       position: absolute;
       left: 0;
-      color: var(--accent-deep);
+      color: var(--accent);
       font-weight: 700;
+      font-size: 1.1rem;
     }
 
-    /* ----- generic card (pillar pages / sector hubs) ----- */
+    /* ——— Generic cards (Neumorphic + collage layers) ——— */
     .card {
-      background: var(--neu-card-bg);
-      border-radius: var(--neu-radius);
-      box-shadow: 8px 8px 18px var(--neu-shadow-dark), -8px -8px 18px var(--neu-shadow-light);
-      padding: 1.8rem;
-      transition: transform 0.2s, box-shadow 0.25s;
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      box-shadow: 10px 10px 22px var(--shadow-dark), -8px -8px 18px var(--shadow-light);
+      padding: 1.9rem;
+      transition: transform 0.25s, box-shadow 0.25s;
       border: none;
+      position: relative;
+      transform: rotate(-0.3deg);
+    }
+
+    .card:nth-child(even) {
+      transform: rotate(0.3deg);
     }
 
     .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 10px 10px 22px var(--neu-shadow-dark), -10px -10px 22px var(--neu-shadow-light);
+      transform: rotate(0deg) translateY(-5px);
+      box-shadow: 14px 14px 28px var(--shadow-dark), -10px -10px 22px var(--shadow-light);
     }
 
     .card h3 {
-      font-size: 1.35rem;
-      margin: 0.5rem 0 0.4rem;
+      font-size: 1.4rem;
+      margin: 0.4rem 0 0.4rem;
       font-weight: 700;
-      color: var(--accent-deep);
+      color: var(--ink);
     }
 
     .card p {
-      color: var(--text-secondary);
+      color: #3a3f4c;
       line-height: 1.5;
     }
 
     .kicker {
-      font-size: 0.75rem;
+      font-size: 0.72rem;
       text-transform: uppercase;
-      letter-spacing: 0.06em;
+      letter-spacing: 0.07em;
       font-weight: 600;
-      color: var(--text-secondary);
-      margin-bottom: 0.4rem;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
       display: inline-block;
-      background: var(--neu-card-bg);
-      padding: 0.2em 0.9em;
-      border-radius: 20px;
-      box-shadow: inset 2px 2px 4px var(--neu-shadow-dark), inset -2px -2px 4px var(--neu-shadow-light);
+      background: var(--card-bg);
+      padding: 0.2em 1em;
+      border-radius: 18px;
+      box-shadow: inset 1px 1px 4px var(--shadow-dark), inset -1px -1px 4px var(--shadow-light);
     }
 
-    /* ----- proposal grid cards ----- */
+    /* ——— Core Guides (previously proposals) ——— */
     .proposal-card {
-      background: var(--neu-card-bg);
-      border-radius: var(--neu-radius);
-      box-shadow: 8px 8px 18px var(--neu-shadow-dark), -8px -8px 18px var(--neu-shadow-light);
-      padding: 1.8rem;
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      box-shadow: 12px 12px 24px var(--shadow-dark), -8px -8px 18px var(--shadow-light);
+      padding: 2rem;
       display: flex;
       flex-direction: column;
-      transition: transform 0.2s, box-shadow 0.25s;
+      transition: transform 0.25s, box-shadow 0.25s;
+      transform: rotate(0.6deg);
+      position: relative;
+    }
+
+    .proposal-card:nth-child(3n) {
+      transform: rotate(-0.4deg);
     }
 
     .proposal-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 12px 12px 24px var(--neu-shadow-dark), -12px -12px 24px var(--neu-shadow-light);
+      transform: rotate(0deg) translateY(-6px);
+      box-shadow: 18px 18px 30px var(--shadow-dark), -12px -12px 24px var(--shadow-light);
     }
 
     .proposal-card h3 {
-      font-size: 1.5rem;
+      font-size: 1.55rem;
       font-weight: 700;
-      margin: 0.5rem 0 0.6rem;
-      color: var(--accent-deep);
+      margin: 0.3rem 0 0.6rem;
+      color: var(--ink);
     }
 
     .proposal-card p {
       flex: 1;
-      color: var(--text-secondary);
+      color: #3a3f4c;
       margin-bottom: 1.2rem;
     }
 
@@ -352,66 +388,79 @@
       margin-top: auto;
     }
 
-    /* ----- section spacing ----- */
+    /* ——— Section spacing ——— */
     .section {
-      margin: 3rem 0;
+      margin: 3.5rem 0;
     }
 
     .section h2 {
-      font-size: 2rem;
+      font-size: 2.1rem;
       font-weight: 700;
-      color: var(--accent-deep);
-      margin: 0.6rem 0 1rem;
+      color: var(--ink);
+      margin: 0.4rem 0 1rem;
+      position: relative;
+      display: inline-block;
+    }
+
+    .section h2::after {
+      content: "";
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 100%;
+      height: 6px;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 8'%3E%3Cpath d='M2 5 Q 20 2, 38 5 T 78 4' stroke='%23e54b4b' stroke-width='2.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat left bottom;
+      background-size: contain;
+      opacity: 0.7;
     }
 
     .section-intro {
-      font-size: 1.05rem;
-      color: var(--text-secondary);
-      max-width: 680px;
+      font-size: 1.08rem;
+      color: #3a3f4c;
+      max-width: 720px;
       line-height: 1.6;
     }
 
     .grid-2 {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.8rem;
-      margin-top: 1rem;
+      gap: 2rem;
+      margin-top: 1.2rem;
     }
 
     .proposal-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-      gap: 2rem;
-      margin-top: 1.5rem;
+      grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
+      gap: 2.2rem;
+      margin-top: 1.8rem;
     }
 
-    /* ----- footer ----- */
+    /* Footer */
     .footer {
-      background: var(--neu-card-bg);
-      border-top: 1px solid var(--border-soft);
-      padding: 1.8rem 0;
+      background: var(--card-bg);
+      border-top: 1px solid rgba(0,0,0,0.03);
+      padding: 2rem 0;
       text-align: center;
       font-size: 0.9rem;
-      color: var(--text-secondary);
-      box-shadow: inset 0 4px 10px rgba(0,0,0,0.02);
+      color: #5b5f6b;
+      box-shadow: inset 0 5px 12px rgba(0,0,0,0.02);
       margin-top: 3rem;
     }
 
     .footer a {
-      color: var(--accent-deep);
+      color: var(--accent);
       font-weight: 600;
       text-decoration: none;
     }
 
-    /* ----- responsiveness (preserve structure) ----- */
     @media (max-width: 768px) {
       .hero-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
       }
-
       .hero-card, .card, .proposal-card {
         padding: 1.5rem;
+        transform: rotate(0);
       }
     }
   </style>
@@ -421,7 +470,7 @@
   <div class="container nav">
     <a class="brand" href="/">
       <span class="brand-mark">LG</span>
-      <span>Signal Grid<small>LLM Guider proposal</small></span>
+      <span>Signal Grid<small>LLM Guider · Ethical AI guides</small></span>
     </a>
     <div class="nav-actions">
       <div class="toggle-group" aria-label="Language toggle">
@@ -436,21 +485,22 @@
   </div>
 </header>
 <main>
+  <!-- ═══ HERO : core promise + ethical framing ═══ -->
   <section class="hero">
     <div class="container hero-grid">
       <div>
         <div class="badge-row">
           <span class="eyebrow">propuestav1 · <span class="inline-lang" data-lang="en">design route</span><span class="inline-lang" data-lang="es">ruta de diseño</span></span>
-          <span class="status-chip"><span class="inline-lang" data-lang="en">Alternative visual direction</span><span class="inline-lang" data-lang="es">Dirección visual alternativa</span></span>
+          <span class="status-chip"><span class="inline-lang" data-lang="en">Ethical AI focus</span><span class="inline-lang" data-lang="es">Enfoque ético en IA</span></span>
         </div>
-        <div data-lang="en"><h1>Signal Grid</h1></div>
-        <div data-lang="es"><h1>Signal Grid</h1></div>
-        <div data-lang="en"><p class="lead">A launch-ready, crisp landing with strong hierarchy and balanced trust.</p></div>
-        <div data-lang="es"><p class="lead">Una landing muy lanzable, limpia y con jerarquía fuerte y señales de confianza equilibradas.</p></div>
+        <div data-lang="en"><h1>Guides that<br>earn trust</h1></div>
+        <div data-lang="es"><h1>Guías que<br>generan confianza</h1></div>
+        <div data-lang="en"><p class="lead">In‑depth, responsible walkthroughs for GPT‑4, Claude, Gemini & Llama — with ethics built into every chapter.</p></div>
+        <div data-lang="es"><p class="lead">Guías profundas y responsables para GPT‑4, Claude, Gemini y Llama — con la ética integrada en cada capítulo.</p></div>
         <div class="hero-actions">
           <a class="button button-primary" href="https://github.com/Quitiweb/llm-guider">
-            <span class="inline-lang" data-lang="en">Open repo</span>
-            <span class="inline-lang" data-lang="es">Abrir repo</span>
+            <span class="inline-lang" data-lang="en">Explore the guides</span>
+            <span class="inline-lang" data-lang="es">Explorar las guías</span>
           </a>
           <a class="button button-secondary" href="/">
             <span class="inline-lang" data-lang="en">Back to main landing</span>
@@ -459,83 +509,86 @@
         </div>
       </div>
       <aside class="hero-card">
-        <span class="kicker"><span class="inline-lang" data-lang="en">Style intent</span><span class="inline-lang" data-lang="es">Intención visual</span></span>
-        <div data-lang="en"><h2>Same idea, different emotional framing.</h2></div>
-        <div data-lang="es"><h2>La misma idea, con otro marco emocional.</h2></div>
+        <span class="kicker"><span class="inline-lang" data-lang="en">Our ethical backbone</span><span class="inline-lang" data-lang="es">Nuestra base ética</span></span>
+        <div data-lang="en"><h2>Transparency, fairness & human agency first.</h2></div>
+        <div data-lang="es"><h2>Transparencia, equidad y control humano primero.</h2></div>
         <ul class="list">
-          <li><span class="inline-lang" data-lang="en">Authority without sounding cold</span><span class="inline-lang" data-lang="es">Autoridad sin sonar frío</span></li>
-          <li><span class="inline-lang" data-lang="en">SEO ambition without spam vibes</span><span class="inline-lang" data-lang="es">Ambición SEO sin vibes de spam</span></li>
-          <li><span class="inline-lang" data-lang="en">Bilingual from the start</span><span class="inline-lang" data-lang="es">Bilingüe desde el inicio</span></li>
-          <li><span class="inline-lang" data-lang="en">Static today, expandable tomorrow</span><span class="inline-lang" data-lang="es">Estático hoy, ampliable mañana</span></li>
+          <li><span class="inline-lang" data-lang="en">Bias‑aware evaluations</span><span class="inline-lang" data-lang="es">Evaluaciones conscientes del sesgo</span></li>
+          <li><span class="inline-lang" data-lang="en">Privacy‑preserving workflows</span><span class="inline-lang" data-lang="es">Flujos que respetan la privacidad</span></li>
+          <li><span class="inline-lang" data-lang="en">Model accountability comparisons</span><span class="inline-lang" data-lang="es">Comparaciones de responsabilidad</span></li>
+          <li><span class="inline-lang" data-lang="en">Always human‑in‑the‑loop</span><span class="inline-lang" data-lang="es">Siempre con supervisión humana</span></li>
         </ul>
       </aside>
     </div>
   </section>
-  
+
+  <!-- ═══ OUR APPROACH ═══ -->
   <section class="section">
     <div class="container">
-      <span class="kicker"><span class="inline-lang" data-lang="en">How this version reads</span><span class="inline-lang" data-lang="es">Cómo se lee esta versión</span></span>
-      <div data-lang="en"><h2>Designed to make the moat feel believable.</h2></div>
-      <div data-lang="es"><h2>Diseñada para que el moat se sienta creíble.</h2></div>
-      <div data-lang="en"><p class="section-intro">Each proposal reuses the same strategic core from the README, but changes visual hierarchy, pacing and brand energy. That lets you decide what identity fits the project best before investing in the full stack.</p></div>
-      <div data-lang="es"><p class="section-intro">Cada propuesta reutiliza el mismo núcleo estratégico del README, pero cambia la jerarquía visual, el ritmo y la energía de marca. Así podéis decidir qué identidad encaja mejor antes de invertir en el stack completo.</p></div>
+      <span class="kicker"><span class="inline-lang" data-lang="en">How we build confidence</span><span class="inline-lang" data-lang="es">Cómo construimos confianza</span></span>
+      <div data-lang="en"><h2>Practical guidance, not hype.</h2></div>
+      <div data-lang="es"><h2>Orientación práctica, no exageraciones.</h2></div>
+      <div data-lang="en"><p class="section-intro">Each guide is a structured, independent resource — we map out real capabilities, hidden limitations, and the ethical trade‑offs you need to know before integrating an LLM into your work.</p></div>
+      <div data-lang="es"><p class="section-intro">Cada guía es un recurso estructurado e independiente: mapeamos capacidades reales, limitaciones ocultas y los compromisos éticos que necesitas conocer antes de integrar un LLM en tu trabajo.</p></div>
       <div class="grid-2">
         <article class="card">
-          <span class="kicker">Pillar pages</span>
-          <div data-lang="en"><h3>Pillar pages</h3><p>GPT, Claude, Gemini and Llama as canonical hubs.</p></div>
-          <div data-lang="es"><h3>Pillar pages</h3><p>GPT, Claude, Gemini y Llama como hubs canónicos.</p></div>
+          <span class="kicker"><span class="inline-lang" data-lang="en">Model deep dives</span><span class="inline-lang" data-lang="es">Análisis a fondo</span></span>
+          <div data-lang="en"><h3>GPT‑4, Claude, Gemini, Llama</h3><p>Side‑by‑side comparisons, prompt strategies, and capability maps that cut through the marketing noise.</p></div>
+          <div data-lang="es"><h3>GPT‑4, Claude, Gemini, Llama</h3><p>Comparativas detalladas, estrategias de prompt y mapas de capacidades que evitan el ruido comercial.</p></div>
         </article>
         <article class="card">
-          <span class="kicker">Sector hubs</span>
-          <div data-lang="en"><h3>Sector hubs</h3><p>Legal, hospitality, marketing and sales as practical entry points.</p></div>
-          <div data-lang="es"><h3>Sector hubs</h3><p>Legal, hostelería, marketing y ventas como puntos de entrada prácticos.</p></div>
+          <span class="kicker"><span class="inline-lang" data-lang="en">Ethics & safety</span><span class="inline-lang" data-lang="es">Ética y seguridad</span></span>
+          <div data-lang="en"><h3>Responsible AI playbooks</h3><p>Bias checklists, privacy guardrails, and accountability frameworks for teams building with generative AI.</p></div>
+          <div data-lang="es"><h3>Guías de IA responsable</h3><p>Listas de verificación de sesgos, barreras de privacidad y marcos de responsabilidad para equipos que construyen con IA generativa.</p></div>
         </article>
       </div>
     </div>
   </section>
-  
+
+  <!-- ═══ CORE GUIDES (re‑imagined proposals as AI guide offerings) ═══ -->
   <section class="section">
     <div class="container">
-      <span class="kicker"><span class="inline-lang" data-lang="en">Other proposals</span><span class="inline-lang" data-lang="es">Otras propuestas</span></span>
+      <span class="kicker"><span class="inline-lang" data-lang="en">Start with a guide</span><span class="inline-lang" data-lang="es">Comienza con una guía</span></span>
       <div class="proposal-grid">
         <article class="proposal-card">
-          <span class="kicker">propuestav2</span>
-          <h3>Editorial Atlas</h3>
-          <div data-lang="en"><p>An editorial, authority-first version that feels like a premium publication.</p></div>
-          <div data-lang="es"><p>Una versión editorial y centrada en autoridad que se siente como una publicación premium.</p></div>
-          <a class="button button-secondary" href="/propuestav2/"><span class="inline-lang" data-lang="en">Open</span><span class="inline-lang" data-lang="es">Abrir</span></a>
+          <span class="kicker">GPT‑4</span>
+          <h3>GPT‑4 Guide</h3>
+          <div data-lang="en"><p>Master reasoning, vision & plugins. Includes bias‑testing prompts and enterprise ethics checks.</p></div>
+          <div data-lang="es"><p>Domina razonamiento, visión y plugins. Incluye pruebas de sesgo y controles éticos empresariales.</p></div>
+          <a class="button button-secondary" href="/propuestav2/"><span class="inline-lang" data-lang="en">Open guide</span><span class="inline-lang" data-lang="es">Abrir guía</span></a>
         </article>
         <article class="proposal-card">
-          <span class="kicker">propuestav3</span>
-          <h3>Bento Navigator</h3>
-          <div data-lang="en"><p>A modular bento layout for quickly explaining features, sectors and paths.</p></div>
-          <div data-lang="es"><p>Una composición bento modular para explicar rápido features, sectores y rutas.</p></div>
-          <a class="button button-secondary" href="/propuestav3/"><span class="inline-lang" data-lang="en">Open</span><span class="inline-lang" data-lang="es">Abrir</span></a>
+          <span class="kicker">Claude</span>
+          <h3>Claude Guide</h3>
+          <div data-lang="en"><p>Constitutional AI explained. Best practices for long‑context tasks and safe deployment.</p></div>
+          <div data-lang="es"><p>IA constitucional explicada. Mejores prácticas para tareas de contexto largo y despliegue seguro.</p></div>
+          <a class="button button-secondary" href="/propuestav3/"><span class="inline-lang" data-lang="en">Open guide</span><span class="inline-lang" data-lang="es">Abrir guía</span></a>
         </article>
         <article class="proposal-card">
-          <span class="kicker">propuestav4</span>
-          <h3>Terminal Moat</h3>
-          <div data-lang="en"><p>A builder-facing concept with terminal aesthetics and technical confidence.</p></div>
-          <div data-lang="es"><p>Un concepto más builder, con estética terminal y confianza técnica.</p></div>
-          <a class="button button-secondary" href="/propuestav4/"><span class="inline-lang" data-lang="en">Open</span><span class="inline-lang" data-lang="es">Abrir</span></a>
+          <span class="kicker">Gemini</span>
+          <h3>Gemini Guide</h3>
+          <div data-lang="en"><p>Multimodal workflows and Google ecosystem integration, with privacy‑first settings.</p></div>
+          <div data-lang="es"><p>Flujos multimodales e integración con el ecosistema Google, con configuraciones de privacidad.</p></div>
+          <a class="button button-secondary" href="/propuestav4/"><span class="inline-lang" data-lang="en">Open guide</span><span class="inline-lang" data-lang="es">Abrir guía</span></a>
         </article>
         <article class="proposal-card">
-          <span class="kicker">propuestav5</span>
-          <h3>Premium Orbit</h3>
-          <div data-lang="en"><p>A more aspirational direction for brand gravity and future premium products.</p></div>
-          <div data-lang="es"><p>Una dirección más aspiracional para reforzar marca y futuros productos premium.</p></div>
-          <a class="button button-secondary" href="/propuestav5/"><span class="inline-lang" data-lang="en">Open</span><span class="inline-lang" data-lang="es">Abrir</span></a>
+          <span class="kicker">Llama</span>
+          <h3>Llama Guide</h3>
+          <div data-lang="en"><p>Open‑source power, on‑prem deployment & ethical fine‑tuning for sensitive data.</p></div>
+          <div data-lang="es"><p>Potencia open‑source, despliegue local y ajuste ético para datos sensibles.</p></div>
+          <a class="button button-secondary" href="/propuestav5/"><span class="inline-lang" data-lang="en">Open guide</span><span class="inline-lang" data-lang="es">Abrir guía</span></a>
         </article>
       </div>
     </div>
   </section>
 </main>
+
 <footer class="footer">
   <div class="container">
-    Draft concept for guider.quitiweb.com · 
-    <a href="/"><span class="inline-lang" data-lang="en">return to main landing</span><span class="inline-lang" data-lang="es">volver a la landing principal</span></a>
+    Draft concept for guider.quitiweb.com · <a href="/"><span class="inline-lang" data-lang="en">return to main landing</span><span class="inline-lang" data-lang="es">volver a la landing principal</span></a>
   </div>
 </footer>
+
 <script src="/assets/site.js"></script>
 </body>
 </html>

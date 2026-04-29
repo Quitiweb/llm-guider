@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#08111f"/>
+      <stop offset="60%" stop-color="#0a1020"/>
+      <stop offset="100%" stop-color="#101a2f"/>
+    </linearGradient>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7c9cff"/>
+      <stop offset="100%" stop-color="#5eead4"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1050" cy="120" r="180" fill="#5eead4" opacity="0.12"/>
+  <circle cx="180" cy="80" r="220" fill="#7c9cff" opacity="0.16"/>
+  <rect x="88" y="86" width="110" height="110" rx="26" fill="url(#g)"/>
+  <text x="226" y="156" fill="#f4f7ff" font-size="58" font-family="Inter, Arial, sans-serif" font-weight="800">LLM Guider</text>
+  <text x="90" y="290" fill="#f4f7ff" font-size="72" font-family="Manrope, Inter, Arial, sans-serif" font-weight="800">Build the bilingual AI reference</text>
+  <text x="90" y="372" fill="#f4f7ff" font-size="72" font-family="Manrope, Inter, Arial, sans-serif" font-weight="800">people actually trust.</text>
+  <text x="90" y="462" fill="#9fb0cf" font-size="30" font-family="Inter, Arial, sans-serif">Programmatic SEO · sector hubs · prompt library · ethics · launch-ready draft</text>
+  <rect x="90" y="510" width="220" height="54" rx="27" fill="#16223d" stroke="#2b3d66"/>
+  <text x="130" y="546" fill="#5eead4" font-size="24" font-family="Inter, Arial, sans-serif" font-weight="700">guider.quitiweb.com</text>
+</svg>

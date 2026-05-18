@@ -1,386 +1,422 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <title>Signal Grid · LLM Guider — AI guides crafted with ethics</title>
-  <meta name="description" content="In-depth, responsible guides for GPT-4, Claude, Gemini & Llama. Independent comparisons, ethical best practices, and a human-first approach.">
-  <meta property="og:title" content="Signal Grid · LLM Guider — AI guides crafted with ethics">
-  <meta property="og:description" content="In-depth, responsible guides for GPT-4, Claude, Gemini & Llama. Independent comparisons, ethical best practices, and a human-first approach.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://guider.quitiweb.com/assets/og-preview.svg">
-  
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f4efe7">
+  <title>Natural Intelligence · LLM Guider</title>
+  <meta name="description" content="Organic approach to AI guidance. Human-centered. Flowing knowledge. Rooted in wisdom and practice.">
+  <meta property="og:title" content="Natural Intelligence | LLM Guider">
+  <meta property="og:description" content="Organic approach to AI guidance. Human-centered.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://guider.quitiweb.com/assets/og-preview.svg">
+  <meta name="theme-color" content="#e8dcc8">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
-  <link rel="stylesheet" href="/assets/site.css">
-  
-  <!-- ═══ Artist‑led design system · Mark Wheeler–inspired tactile collage ═══ -->
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --paper: #f4efe7;
-      --ink: #121826;
-      --accent: #e54b4b;
-      --accent-glow: #ff7b7b;
-      --shadow-dark: rgba(0,0,0,0.06);
-      --shadow-light: rgba(255,255,255,0.9);
-      --card-bg: #fcfaf7;
-      --radius: 20px;
-      --radius-sm: 12px;
-      --font-display: 'Outfit', 'Inter', sans-serif;
-    }
-
-    /* ——— Tactile backdrop with noise texture ——— */
-    body {
-      background: var(--paper);
-      background-image: 
-        radial-gradient(circle at 20% 30%, #fff9f5 0%, #ece4d7 100%),
-        url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E");
-      color: var(--ink);
-      font-family: 'Inter', -apple-system, sans-serif;
+    /* ══════════════════════════════════════════════════
+       ORGANIC NATURAL · Fraunces + Lora · earthy palette
+       Flowing asymmetry, hand-crafted feel, natural rhythms
+       ══════════════════════════════════════════════════ */
+    * {
       margin: 0;
-      -webkit-font-smoothing: antialiased;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    h1, h2, h3, .brand-mark, .kicker, .eyebrow, .status-chip, .lead, .button, .brand {
-      font-family: var(--font-display);
-      font-weight: 600;
-      letter-spacing: -0.02em;
+    :root {
+      --cream-bg: #ede7da;
+      --clay: #c9a373;
+      --sage: #6b7d5a;
+      --earth: #4a3a28;
+      --sky: #a8b8d4;
+      --accent-warm: #d97f4a;
+      --text-dark: #3a3028;
+      --text-light: #6b6560;
+      --font-display: 'Fraunces', serif;
+      --font-body: 'Lora', serif;
+      --font-code: 'JetBrains Mono', monospace;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: linear-gradient(135deg, var(--cream-bg) 0%, #f0ead8 100%);
+      color: var(--text-dark);
+      font-family: var(--font-body);
+      line-height: 1.8;
+      font-size: 17px;
+      min-height: 100vh;
+    }
+
+    a {
+      color: var(--accent-warm);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: var(--sage);
+      text-decoration: underline;
+      text-decoration-style: wavy;
     }
 
     .container {
-      max-width: 1220px;
+      max-width: 1150px;
       margin: 0 auto;
-      padding: 0 1.8rem;
+      padding: 0 2rem;
     }
 
-    /* ——— Header : floating collage strip ——— */
+    /* ── HEADER ── */
     .site-header {
-      background: rgba(252,250,247,0.75);
-      backdrop-filter: blur(24px);
-      -webkit-backdrop-filter: blur(24px);
-      border-bottom: 1px solid rgba(0,0,0,0.04);
-      box-shadow: 0 6px 28px rgba(0,0,0,0.04);
-      padding: 0.8rem 0;
+      background: transparent;
+      border-bottom: 2px solid var(--clay);
+      padding: 3rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(8px);
+      background: rgba(237, 231, 218, 0.85);
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 2.5rem;
+      flex-wrap: wrap;
     }
 
     .brand {
       display: flex;
       align-items: center;
-      gap: 0.5rem;
-      text-decoration: none;
-      color: var(--ink);
+      gap: 1.25rem;
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 1.4rem;
+      color: var(--text-dark);
     }
 
     .brand-mark {
-      display: inline-flex;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--clay) 0%, var(--accent-warm) 100%);
+      color: var(--cream-bg);
+      font-weight: 700;
+      display: flex;
       align-items: center;
       justify-content: center;
-      width: 42px;
-      height: 42px;
-      border-radius: 12px;
-      background: var(--card-bg);
-      box-shadow: 5px 5px 12px var(--shadow-dark), -3px -3px 12px var(--shadow-light);
-      font-weight: 700;
-      font-size: 1.2rem;
-      color: var(--accent);
-      transition: box-shadow 0.2s;
-    }
-
-    .brand span:last-child {
-      display: flex;
-      flex-direction: column;
-      line-height: 1.2;
-      font-weight: 600;
+      font-size: 1.3rem;
+      box-shadow: 0 4px 12px rgba(201, 163, 115, 0.25);
     }
 
     .brand small {
-      font-size: 0.68rem;
-      color: #5b5f6b;
-      font-weight: 500;
-      font-family: 'Inter', sans-serif;
+      display: block;
+      font-size: 0.65rem;
+      font-family: var(--font-body);
+      font-weight: 400;
+      color: var(--text-light);
+      margin-top: 0.4rem;
+      letter-spacing: 0.03em;
+      font-style: italic;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
     }
 
     .toggle-group {
       display: flex;
-      border-radius: 40px;
-      background: var(--card-bg);
-      box-shadow: inset 2px 2px 6px var(--shadow-dark), inset -2px -2px 6px var(--shadow-light);
-      padding: 3px;
+      gap: 0.75rem;
+      background: rgba(201, 163, 115, 0.12);
+      padding: 0.5rem;
+      border-radius: 50px;
     }
 
     .toggle-group button {
       background: transparent;
       border: none;
-      padding: 0.4em 1.2em;
-      border-radius: 30px;
+      padding: 0.6rem 1.2rem;
       font-family: var(--font-display);
       font-weight: 600;
-      font-size: 0.82rem;
-      color: #5b5f6b;
+      font-size: 0.9rem;
+      color: var(--text-light);
       cursor: pointer;
-      transition: all 0.25s;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
     }
 
-    .toggle-group button.active {
-      background: var(--card-bg);
-      box-shadow: 4px 4px 8px var(--shadow-dark), -4px -4px 8px var(--shadow-light);
-      color: var(--accent);
+    .toggle-group button.is-active {
+      background: var(--clay);
+      color: var(--cream-bg);
+      box-shadow: 0 2px 8px rgba(201, 163, 115, 0.3);
     }
 
-    /* ——— Buttons with heavy paper‑like press ——— */
+    /* ── BUTTONS ── */
     .button {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 0.8em 2.2em;
-      border-radius: 38px;
+      padding: 1rem 2.2rem;
+      border-radius: 50px;
+      border: 2px solid var(--clay);
+      background: transparent;
+      color: var(--clay);
+      font-family: var(--font-display);
       font-weight: 600;
-      text-decoration: none;
-      transition: box-shadow 0.2s, transform 0.2s;
-      border: none;
-      background: var(--card-bg);
-      box-shadow: 7px 7px 14px var(--shadow-dark), -7px -7px 14px var(--shadow-light);
-      color: var(--ink);
       font-size: 0.95rem;
-      letter-spacing: 0.01em;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
       cursor: pointer;
-      position: relative;
+      transition: all 0.3s ease;
+      text-decoration: none;
     }
 
     .button:hover {
-      box-shadow: inset 3px 3px 8px var(--shadow-dark), inset -3px -3px 8px var(--shadow-light);
-      transform: translateY(2px);
+      background: var(--clay);
+      color: var(--cream-bg);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(201, 163, 115, 0.3);
     }
 
     .button-primary {
-      background: var(--accent);
-      color: #fff;
-      box-shadow: 8px 8px 18px rgba(229,75,75,0.25), -6px -6px 18px rgba(255,255,255,0.7);
+      background: var(--clay);
+      color: var(--cream-bg);
+      border-color: var(--clay);
     }
 
     .button-primary:hover {
-      box-shadow: inset 4px 4px 10px rgba(0,0,0,0.3), inset -4px -4px 10px rgba(255,255,255,0.25);
+      background: var(--accent-warm);
+      border-color: var(--accent-warm);
     }
 
-    /* ——— Hero area : bold typography with hand‑drawn energy ——— */
+    /* ── HERO ── */
     .hero {
-      padding: 4.5rem 0 3.2rem;
+      padding: 4rem 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -10%;
+      right: -5%;
+      width: 400px;
+      height: 400px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(168, 184, 212, 0.15) 0%, transparent 70%);
+      z-index: 0;
     }
 
     .hero-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 2.8rem;
+      gap: 3.5rem;
       align-items: center;
+      position: relative;
+      z-index: 1;
     }
 
     .hero h1 {
-      font-size: clamp(3.2rem, 8vw, 4.8rem);
-      font-weight: 800;
-      line-height: 1.05;
-      color: var(--ink);
-      margin: 0.2rem 0 0.7rem;
-      position: relative;
-      display: inline-block;
-    }
-
-    /* Hand‑drawn underline (artist’s scribble) */
-    .hero h1::after {
-      content: "";
-      position: absolute;
-      bottom: -6px;
-      left: 0;
-      width: 110%;
-      height: 18px;
-      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 14'%3E%3Cpath d='M2 11 C 30 6, 60 12, 118 8' stroke='%23e54b4b' stroke-width='3' fill='none' stroke-linecap='round' opacity='0.8'/%3E%3C/svg%3E") no-repeat left bottom;
-      background-size: contain;
-      pointer-events: none;
+      font-family: var(--font-display);
+      font-size: clamp(3.2rem, 7vw, 5.2rem);
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: 1.5rem;
+      color: var(--text-dark);
+      letter-spacing: -0.01em;
     }
 
     .lead {
-      font-size: 1.25rem;
-      color: #3a3f4c;
-      line-height: 1.5;
-      font-weight: 500;
-      max-width: 90%;
+      font-size: 1.2rem;
+      line-height: 1.8;
+      color: var(--text-light);
+      max-width: 95%;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
     }
 
     .badge-row {
       display: flex;
-      align-items: center;
-      gap: 0.75rem;
+      gap: 1rem;
+      margin-bottom: 2rem;
       flex-wrap: wrap;
-      margin-bottom: 0.6rem;
     }
 
     .eyebrow {
-      font-size: 0.78rem;
+      font-family: var(--font-display);
+      font-size: 0.75rem;
       font-weight: 600;
       text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: var(--ink);
-      background: var(--card-bg);
-      padding: 0.3em 1em;
-      border-radius: 30px;
-      box-shadow: inset 2px 2px 5px var(--shadow-dark), inset -2px -2px 5px var(--shadow-light);
+      letter-spacing: 0.08em;
+      color: var(--accent-warm);
+      background: rgba(217, 127, 74, 0.1);
+      padding: 0.6rem 1.4rem;
+      border-radius: 50px;
     }
 
     .status-chip {
-      font-size: 0.78rem;
-      font-weight: 500;
-      background: var(--card-bg);
-      padding: 0.3em 1em;
-      border-radius: 30px;
-      box-shadow: inset 2px 2px 5px var(--shadow-dark), inset -2px -2px 5px var(--shadow-light);
-      color: var(--accent);
+      font-family: var(--font-display);
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--sage);
+      background: rgba(107, 125, 90, 0.15);
+      padding: 0.6rem 1.4rem;
+      border-radius: 50px;
     }
 
-    /* Hero collage card — paper‑layered feel */
     .hero-card {
-      background: var(--card-bg);
-      border-radius: var(--radius);
-      box-shadow: 18px 18px 34px var(--shadow-dark), -12px -12px 24px var(--shadow-light);
-      padding: 2.3rem 2.2rem;
-      transform: rotate(0.5deg);
-      transition: transform 0.3s, box-shadow 0.25s;
-      position: relative;
+      background: linear-gradient(180deg, rgba(255,255,255,0.6) 0%, rgba(201, 163, 115, 0.08) 100%);
+      border: 2px solid var(--clay);
+      border-radius: 20px;
+      padding: 2.5rem;
+      box-shadow: 0 8px 24px rgba(58, 48, 40, 0.08);
+      transform: rotate(-1.5deg);
     }
 
     .hero-card:hover {
-      transform: rotate(0deg) translateY(-4px);
-      box-shadow: 22px 22px 38px var(--shadow-dark), -16px -16px 28px var(--shadow-light);
-    }
-
-    .hero-card::before {
-      content: "";
-      position: absolute;
-      top: -8px;
-      right: -8px;
-      width: 100%;
-      height: 100%;
-      background: rgba(229,75,75,0.04);
-      border-radius: var(--radius);
-      border: 2px dashed rgba(229,75,75,0.3);
-      z-index: -1;
+      transform: rotate(-1.5deg) translateY(-4px);
     }
 
     .hero-card h2 {
-      font-size: 1.65rem;
-      margin: 0.3rem 0 1rem;
+      font-family: var(--font-display);
+      font-size: 1.9rem;
       font-weight: 700;
-      color: var(--ink);
+      margin: 0.5rem 0 1.5rem;
+      color: var(--sage);
       line-height: 1.3;
+    }
+
+    .kicker {
+      font-family: var(--font-display);
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent-warm);
+      margin-bottom: 1rem;
+      display: block;
     }
 
     .list {
       list-style: none;
-      padding: 0;
-      margin: 1.5rem 0 0;
+      display: grid;
+      gap: 0.85rem;
     }
 
     .list li {
-      padding: 0.5rem 0 0.5rem 1.6rem;
+      padding-left: 1.8rem;
       position: relative;
-      font-weight: 500;
-      color: #3a3f4c;
-      border-bottom: 1px solid rgba(0,0,0,0.03);
+      color: var(--text-light);
+      font-size: 1rem;
     }
 
     .list li::before {
-      content: "✧";
+      content: '∿';
       position: absolute;
       left: 0;
-      color: var(--accent);
+      color: var(--clay);
       font-weight: 700;
-      font-size: 1.1rem;
+      font-size: 1.2rem;
     }
 
-    /* ——— Generic cards (Neumorphic + collage layers) ——— */
-    .card {
-      background: var(--card-bg);
-      border-radius: var(--radius);
-      box-shadow: 10px 10px 22px var(--shadow-dark), -8px -8px 18px var(--shadow-light);
-      padding: 1.9rem;
-      transition: transform 0.25s, box-shadow 0.25s;
-      border: none;
+    /* ── SECTIONS ── */
+    .section {
+      padding: 5rem 0;
       position: relative;
-      transform: rotate(-0.3deg);
+    }
+
+    .section:nth-child(odd) {
+      background: linear-gradient(180deg, transparent 0%, rgba(168, 184, 212, 0.05) 100%);
+    }
+
+    .section h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 700;
+      line-height: 1.2;
+      margin: 0 0 1.5rem;
+      color: var(--sage);
+      letter-spacing: -0.01em;
+    }
+
+    .section-intro {
+      font-size: 1.1rem;
+      line-height: 1.85;
+      max-width: 75ch;
+      color: var(--text-light);
+      margin-bottom: 3rem;
+    }
+
+    /* ── GRIDS ── */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2.5rem;
+      margin-top: 2rem;
+    }
+
+    .proposal-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    /* ── CARDS ── */
+    .card, .proposal-card {
+      background: linear-gradient(135deg, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0.3) 100%);
+      border: 2px solid var(--clay);
+      border-radius: 16px;
+      padding: 2.2rem;
+      box-shadow: 0 4px 12px rgba(58, 48, 40, 0.06);
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      transform: rotate(0.8deg);
     }
 
     .card:nth-child(even) {
-      transform: rotate(0.3deg);
+      transform: rotate(-0.8deg);
     }
 
-    .card:hover {
-      transform: rotate(0deg) translateY(-5px);
-      box-shadow: 14px 14px 28px var(--shadow-dark), -10px -10px 22px var(--shadow-light);
-    }
-
-    .card h3 {
-      font-size: 1.4rem;
-      margin: 0.4rem 0 0.4rem;
-      font-weight: 700;
-      color: var(--ink);
-    }
-
-    .card p {
-      color: #3a3f4c;
-      line-height: 1.5;
-    }
-
-    .kicker {
-      font-size: 0.72rem;
-      text-transform: uppercase;
-      letter-spacing: 0.07em;
-      font-weight: 600;
-      color: var(--accent);
-      margin-bottom: 0.5rem;
-      display: inline-block;
-      background: var(--card-bg);
-      padding: 0.2em 1em;
-      border-radius: 18px;
-      box-shadow: inset 1px 1px 4px var(--shadow-dark), inset -1px -1px 4px var(--shadow-light);
-    }
-
-    /* ——— Core Guides (previously proposals) ——— */
-    .proposal-card {
-      background: var(--card-bg);
-      border-radius: var(--radius);
-      box-shadow: 12px 12px 24px var(--shadow-dark), -8px -8px 18px var(--shadow-light);
-      padding: 2rem;
-      display: flex;
-      flex-direction: column;
-      transition: transform 0.25s, box-shadow 0.25s;
-      transform: rotate(0.6deg);
-      position: relative;
-    }
-
-    .proposal-card:nth-child(3n) {
-      transform: rotate(-0.4deg);
-    }
-
-    .proposal-card:hover {
+    .card:hover, .proposal-card:hover {
       transform: rotate(0deg) translateY(-6px);
-      box-shadow: 18px 18px 30px var(--shadow-dark), -12px -12px 24px var(--shadow-light);
+      box-shadow: 0 12px 28px rgba(58, 48, 40, 0.12);
+      border-color: var(--accent-warm);
     }
 
-    .proposal-card h3 {
-      font-size: 1.55rem;
+    .card h3, .proposal-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
       font-weight: 700;
-      margin: 0.3rem 0 0.6rem;
-      color: var(--ink);
+      margin: 0.5rem 0 1.2rem;
+      color: var(--accent-warm);
+      line-height: 1.3;
     }
 
-    .proposal-card p {
+    .card p, .proposal-card p {
       flex: 1;
-      color: #3a3f4c;
-      margin-bottom: 1.2rem;
+      color: var(--text-light);
+      margin-bottom: 1.5rem;
+      line-height: 1.8;
+      font-size: 1rem;
     }
 
     .proposal-card .button {
@@ -388,89 +424,76 @@
       margin-top: auto;
     }
 
-    /* ——— Section spacing ——— */
-    .section {
-      margin: 3.5rem 0;
-    }
-
-    .section h2 {
-      font-size: 2.1rem;
-      font-weight: 700;
-      color: var(--ink);
-      margin: 0.4rem 0 1rem;
-      position: relative;
-      display: inline-block;
-    }
-
-    .section h2::after {
-      content: "";
-      position: absolute;
-      bottom: -4px;
-      left: 0;
-      width: 100%;
-      height: 6px;
-      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 8'%3E%3Cpath d='M2 5 Q 20 2, 38 5 T 78 4' stroke='%23e54b4b' stroke-width='2.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat left bottom;
-      background-size: contain;
-      opacity: 0.7;
-    }
-
-    .section-intro {
-      font-size: 1.08rem;
-      color: #3a3f4c;
-      max-width: 720px;
-      line-height: 1.6;
-    }
-
-    .grid-2 {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-      margin-top: 1.2rem;
-    }
-
-    .proposal-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
-      gap: 2.2rem;
-      margin-top: 1.8rem;
-    }
-
-    /* Footer */
+    /* ── FOOTER ── */
     .footer {
-      background: var(--card-bg);
-      border-top: 1px solid rgba(0,0,0,0.03);
-      padding: 2rem 0;
+      border-top: 2px solid var(--clay);
+      padding: 3.5rem 0;
       text-align: center;
-      font-size: 0.9rem;
-      color: #5b5f6b;
-      box-shadow: inset 0 5px 12px rgba(0,0,0,0.02);
-      margin-top: 3rem;
+      font-size: 1rem;
+      color: var(--text-light);
+      margin-top: 5rem;
+      background: linear-gradient(180deg, transparent 0%, rgba(201, 163, 115, 0.08) 100%);
     }
 
     .footer a {
-      color: var(--accent);
+      color: var(--accent-warm);
       font-weight: 600;
-      text-decoration: none;
     }
 
+    /* ── LANGUAGE ── */
+    [data-lang], .inline-lang {
+      display: none;
+    }
+
+    [data-lang].is-visible {
+      display: block;
+    }
+
+    .inline-lang.is-visible {
+      display: inline;
+    }
+
+    /* ── RESPONSIVE ── */
     @media (max-width: 768px) {
       .hero-grid {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 2.5rem;
       }
-      .hero-card, .card, .proposal-card {
-        padding: 1.5rem;
-        transform: rotate(0);
+
+      .hero h1 {
+        font-size: clamp(2.3rem, 8vw, 3.8rem);
+      }
+
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+      }
+
+      .hero::before {
+        width: 300px;
+        height: 300px;
+      }
+
+      .section {
+        padding: 3rem 0;
+      }
+
+      .container {
+        padding: 0 1.5rem;
       }
     }
   </style>
 </head>
-<body class="layout-minimal">
+<body>
 <header class="site-header">
   <div class="container nav">
     <a class="brand" href="/">
       <span class="brand-mark">LG</span>
-      <span>Signal Grid<small>LLM Guider · Ethical AI guides</small></span>
+      <div>
+        Natural<span class="inline-lang" data-lang="en"> Intelligence</span><span class="inline-lang" data-lang="es"> Intelligence</span>
+        <small><span class="inline-lang" data-lang="en">Organic guidance</span><span class="inline-lang" data-lang="es">Orientación orgánica</span></small>
+      </div>
     </a>
     <div class="nav-actions">
       <div class="toggle-group" aria-label="Language toggle">
@@ -478,105 +501,102 @@
         <button type="button" data-set-lang="es">ES</button>
       </div>
       <a class="button button-secondary" href="/">
-        <span class="inline-lang" data-lang="en">Main landing</span>
-        <span class="inline-lang" data-lang="es">Landing principal</span>
+        <span class="inline-lang" data-lang="en">Home</span>
+        <span class="inline-lang" data-lang="es">Inicio</span>
       </a>
     </div>
   </div>
 </header>
+
 <main>
-  <!-- ═══ HERO : core promise + ethical framing ═══ -->
   <section class="hero">
     <div class="container hero-grid">
       <div>
         <div class="badge-row">
-          <span class="eyebrow">propuestav1 · <span class="inline-lang" data-lang="en">design route</span><span class="inline-lang" data-lang="es">ruta de diseño</span></span>
-          <span class="status-chip"><span class="inline-lang" data-lang="en">Ethical AI focus</span><span class="inline-lang" data-lang="es">Enfoque ético en IA</span></span>
+          <span class="eyebrow">propuestav3</span>
+          <span class="status-chip"><span class="inline-lang" data-lang="en">Organic</span><span class="inline-lang" data-lang="es">Orgánico</span></span>
         </div>
-        <div data-lang="en"><h1>Guides that<br>earn trust</h1></div>
-        <div data-lang="es"><h1>Guías que<br>generan confianza</h1></div>
-        <div data-lang="en"><p class="lead">In‑depth, responsible walkthroughs for GPT‑4, Claude, Gemini & Llama — with ethics built into every chapter.</p></div>
-        <div data-lang="es"><p class="lead">Guías profundas y responsables para GPT‑4, Claude, Gemini y Llama — con la ética integrada en cada capítulo.</p></div>
+        <div data-lang="en"><h1>AI wisdom, naturally rooted.</h1></div>
+        <div data-lang="es"><h1>Sabiduría en IA, arraigada naturalmente.</h1></div>
+        <div data-lang="en"><p class="lead">Flowing knowledge about GPT, Claude, Gemini, and Llama. Human-centered approaches. Real-world patterns. Ethical by design. Built for teams that think holistically.</p></div>
+        <div data-lang="es"><p class="lead">Conocimiento fluido sobre GPT, Claude, Gemini y Llama. Enfoques centrados en el ser humano. Patrones del mundo real. Ético por diseño. Construido para equipos que piensan holísticamente.</p></div>
         <div class="hero-actions">
           <a class="button button-primary" href="https://github.com/Quitiweb/llm-guider">
-            <span class="inline-lang" data-lang="en">Explore the guides</span>
-            <span class="inline-lang" data-lang="es">Explorar las guías</span>
+            <span class="inline-lang" data-lang="en">Begin</span>
+            <span class="inline-lang" data-lang="es">Comenzar</span>
           </a>
           <a class="button button-secondary" href="/">
-            <span class="inline-lang" data-lang="en">Back to main landing</span>
-            <span class="inline-lang" data-lang="es">Volver a la landing principal</span>
+            <span class="inline-lang" data-lang="en">Back home</span>
+            <span class="inline-lang" data-lang="es">Volver al inicio</span>
           </a>
         </div>
       </div>
       <aside class="hero-card">
-        <span class="kicker"><span class="inline-lang" data-lang="en">Our ethical backbone</span><span class="inline-lang" data-lang="es">Nuestra base ética</span></span>
-        <div data-lang="en"><h2>Transparency, fairness & human agency first.</h2></div>
-        <div data-lang="es"><h2>Transparencia, equidad y control humano primero.</h2></div>
+        <span class="kicker"><span class="inline-lang" data-lang="en">Our philosophy</span><span class="inline-lang" data-lang="es">Nuestra filosofía</span></span>
+        <h2><span class="inline-lang" data-lang="en">Human flourishing first</span><span class="inline-lang" data-lang="es">El florecimiento humano primero</span></h2>
         <ul class="list">
-          <li><span class="inline-lang" data-lang="en">Bias‑aware evaluations</span><span class="inline-lang" data-lang="es">Evaluaciones conscientes del sesgo</span></li>
-          <li><span class="inline-lang" data-lang="en">Privacy‑preserving workflows</span><span class="inline-lang" data-lang="es">Flujos que respetan la privacidad</span></li>
-          <li><span class="inline-lang" data-lang="en">Model accountability comparisons</span><span class="inline-lang" data-lang="es">Comparaciones de responsabilidad</span></li>
-          <li><span class="inline-lang" data-lang="en">Always human‑in‑the‑loop</span><span class="inline-lang" data-lang="es">Siempre con supervisión humana</span></li>
+          <li><span class="inline-lang" data-lang="en">Holistic understanding</span><span class="inline-lang" data-lang="es">Comprensión holística</span></li>
+          <li><span class="inline-lang" data-lang="en">Practical wisdom</span><span class="inline-lang" data-lang="es">Sabiduría práctica</span></li>
+          <li><span class="inline-lang" data-lang="en">Ethical stewardship</span><span class="inline-lang" data-lang="es">Administración ética</span></li>
+          <li><span class="inline-lang" data-lang="en">Living knowledge</span><span class="inline-lang" data-lang="es">Conocimiento vivo</span></li>
         </ul>
       </aside>
     </div>
   </section>
 
-  <!-- ═══ OUR APPROACH ═══ -->
   <section class="section">
     <div class="container">
-      <span class="kicker"><span class="inline-lang" data-lang="en">How we build confidence</span><span class="inline-lang" data-lang="es">Cómo construimos confianza</span></span>
-      <div data-lang="en"><h2>Practical guidance, not hype.</h2></div>
-      <div data-lang="es"><h2>Orientación práctica, no exageraciones.</h2></div>
-      <div data-lang="en"><p class="section-intro">Each guide is a structured, independent resource — we map out real capabilities, hidden limitations, and the ethical trade‑offs you need to know before integrating an LLM into your work.</p></div>
-      <div data-lang="es"><p class="section-intro">Cada guía es un recurso estructurado e independiente: mapeamos capacidades reales, limitaciones ocultas y los compromisos éticos que necesitas conocer antes de integrar un LLM en tu trabajo.</p></div>
+      <span class="kicker"><span class="inline-lang" data-lang="en">Growing your practice</span><span class="inline-lang" data-lang="es">Cultivando tu práctica</span></span>
+      <h2><span class="inline-lang" data-lang="en">Knowledge that breathes with your work.</span><span class="inline-lang" data-lang="es">Conocimiento que respira con tu trabajo.</span></h2>
+      <div data-lang="en"><p class="section-intro">AI guidance shouldn't feel mechanical or distant. It should grow with your practice. We offer structured resources that adapt to how you actually think—bilingual, deeply researched, rooted in real experience, and always centered on what matters: your success and your integrity.</p></div>
+      <div data-lang="es"><p class="section-intro">La orientación sobre IA no debería sentirse mecánica o distante. Debería crecer con tu práctica. Ofrecemos recursos estructurados que se adaptan a cómo realmente piensas, bilingües, profundamente investigados, arraigados en experiencia real, y siempre centrados en lo que importa: tu éxito y tu integridad.</p></div>
+
       <div class="grid-2">
         <article class="card">
-          <span class="kicker"><span class="inline-lang" data-lang="en">Model deep dives</span><span class="inline-lang" data-lang="es">Análisis a fondo</span></span>
-          <div data-lang="en"><h3>GPT‑4, Claude, Gemini, Llama</h3><p>Side‑by‑side comparisons, prompt strategies, and capability maps that cut through the marketing noise.</p></div>
-          <div data-lang="es"><h3>GPT‑4, Claude, Gemini, Llama</h3><p>Comparativas detalladas, estrategias de prompt y mapas de capacidades que evitan el ruido comercial.</p></div>
+          <span class="kicker"><span class="inline-lang" data-lang="en">For practitioners</span><span class="inline-lang" data-lang="es">Para practicantes</span></span>
+          <div data-lang="en"><h3>Deeper patterns</h3><p>Beyond surface features. Real patterns that work across contexts. Prompt strategies, workflow optimization, and wisdom from practice that generalizes.</p></div>
+          <div data-lang="es"><h3>Patrones más profundos</h3><p>Más allá de características superficiales. Patrones reales que funcionan en contextos diferentes. Estrategias de prompt, optimización de flujo de trabajo y sabiduría de la práctica.</p></div>
         </article>
         <article class="card">
-          <span class="kicker"><span class="inline-lang" data-lang="en">Ethics & safety</span><span class="inline-lang" data-lang="es">Ética y seguridad</span></span>
-          <div data-lang="en"><h3>Responsible AI playbooks</h3><p>Bias checklists, privacy guardrails, and accountability frameworks for teams building with generative AI.</p></div>
-          <div data-lang="es"><h3>Guías de IA responsable</h3><p>Listas de verificación de sesgos, barreras de privacidad y marcos de responsabilidad para equipos que construyen con IA generativa.</p></div>
+          <span class="kicker"><span class="inline-lang" data-lang="en">For organizations</span><span class="inline-lang" data-lang="es">Para organizaciones</span></span>
+          <div data-lang="en"><h3>Grounded frameworks</h3><p>Governance that fits your culture. Ethical frameworks that live in your team. Integration patterns that respect human judgment and organizational values.</p></div>
+          <div data-lang="es"><h3>Marcos arraigados</h3><p>Gobernanza que se ajusta a tu cultura. Marcos éticos que viven en tu equipo. Patrones de integración que respetan el juicio humano y los valores organizacionales.</p></div>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- ═══ CORE GUIDES (re‑imagined proposals as AI guide offerings) ═══ -->
   <section class="section">
     <div class="container">
-      <span class="kicker"><span class="inline-lang" data-lang="en">Start with a guide</span><span class="inline-lang" data-lang="es">Comienza con una guía</span></span>
+      <span class="kicker"><span class="inline-lang" data-lang="en">Explore the guides</span><span class="inline-lang" data-lang="es">Explora las guías</span></span>
       <div class="proposal-grid">
         <article class="proposal-card">
-          <span class="kicker">GPT‑4</span>
-          <h3>GPT‑4 Guide</h3>
-          <div data-lang="en"><p>Master reasoning, vision & plugins. Includes bias‑testing prompts and enterprise ethics checks.</p></div>
-          <div data-lang="es"><p>Domina razonamiento, visión y plugins. Incluye pruebas de sesgo y controles éticos empresariales.</p></div>
-          <a class="button button-secondary" href="/propuestav2/"><span class="inline-lang" data-lang="en">Open guide</span><span class="inline-lang" data-lang="es">Abrir guía</span></a>
+          <span class="kicker">GPT-4</span>
+          <h3>GPT Journey</h3>
+          <div data-lang="en"><p>Reasoning flows. Practical applications. When to trust it. Building with depth.</p></div>
+          <div data-lang="es"><p>Flujos de razonamiento. Aplicaciones prácticas. Cuándo confiar. Construyendo con profundidad.</p></div>
+          <a class="button button-secondary" href="/propuestav4/"><span class="inline-lang" data-lang="en">Read</span><span class="inline-lang" data-lang="es">Leer</span></a>
         </article>
         <article class="proposal-card">
           <span class="kicker">Claude</span>
-          <h3>Claude Guide</h3>
-          <div data-lang="en"><p>Constitutional AI explained. Best practices for long‑context tasks and safe deployment.</p></div>
-          <div data-lang="es"><p>IA constitucional explicada. Mejores prácticas para tareas de contexto largo y despliegue seguro.</p></div>
-          <a class="button button-secondary" href="/propuestav3/"><span class="inline-lang" data-lang="en">Open guide</span><span class="inline-lang" data-lang="es">Abrir guía</span></a>
+          <h3>Claude Heart</h3>
+          <div data-lang="en"><p>Constitutional soul. Long-form mastery. Safe partnerships with AI. Deep trust.</p></div>
+          <div data-lang="es"><p>Alma constitucional. Dominio de largo formato. Asociaciones seguras con IA. Confianza profunda.</p></div>
+          <a class="button button-secondary" href="/propuestav5/"><span class="inline-lang" data-lang="en">Read</span><span class="inline-lang" data-lang="es">Leer</span></a>
         </article>
         <article class="proposal-card">
           <span class="kicker">Gemini</span>
-          <h3>Gemini Guide</h3>
-          <div data-lang="en"><p>Multimodal workflows and Google ecosystem integration, with privacy‑first settings.</p></div>
-          <div data-lang="es"><p>Flujos multimodales e integración con el ecosistema Google, con configuraciones de privacidad.</p></div>
-          <a class="button button-secondary" href="/propuestav4/"><span class="inline-lang" data-lang="en">Open guide</span><span class="inline-lang" data-lang="es">Abrir guía</span></a>
+          <h3>Gemini Palette</h3>
+          <div data-lang="en"><p>Multimodal artistry. Ecosystem grace. Privacy-conscious integration. Ecosystem wisdom.</p></div>
+          <div data-lang="es"><p>Arte multimodal. Gracia del ecosistema. Integración consciente de la privacidad. Sabiduría del ecosistema.</p></div>
+          <a class="button button-secondary" href="/propuestav1/"><span class="inline-lang" data-lang="en">Read</span><span class="inline-lang" data-lang="es">Leer</span></a>
         </article>
         <article class="proposal-card">
           <span class="kicker">Llama</span>
-          <h3>Llama Guide</h3>
-          <div data-lang="en"><p>Open‑source power, on‑prem deployment & ethical fine‑tuning for sensitive data.</p></div>
-          <div data-lang="es"><p>Potencia open‑source, despliegue local y ajuste ético para datos sensibles.</p></div>
-          <a class="button button-secondary" href="/propuestav5/"><span class="inline-lang" data-lang="en">Open guide</span><span class="inline-lang" data-lang="es">Abrir guía</span></a>
+          <h3>Llama Freedom</h3>
+          <div data-lang="en"><p>Open-source soul. Self-sovereign. Fine-tuning freedom. Ownership clarity.</p></div>
+          <div data-lang="es"><p>Alma open-source. Autosuficiencia. Libertad de ajuste. Claridad de propiedad.</p></div>
+          <a class="button button-secondary" href="/propuestav2/"><span class="inline-lang" data-lang="en">Read</span><span class="inline-lang" data-lang="es">Leer</span></a>
         </article>
       </div>
     </div>
@@ -585,7 +605,9 @@
 
 <footer class="footer">
   <div class="container">
-    Draft concept for guider.quitiweb.com · <a href="/"><span class="inline-lang" data-lang="en">return to main landing</span><span class="inline-lang" data-lang="es">volver a la landing principal</span></a>
+    <p><strong>LLM Guider · Natural Intelligence</strong></p>
+    <p style="margin-top: 1rem;"><span class="inline-lang" data-lang="en">Organic knowledge. Human wisdom. Real practice.</span><span class="inline-lang" data-lang="es">Conocimiento orgánico. Sabiduría humana. Práctica real.</span></p>
+    <p style="margin-top: 1.5rem;"><a href="/">Home</a> · <a href="https://github.com/Quitiweb/llm-guider">GitHub</a></p>
   </div>
 </footer>
 
